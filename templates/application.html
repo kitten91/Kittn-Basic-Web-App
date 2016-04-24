@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Kittn Application{% endblock %}
+
+{% block content %}
+<h2>Application Received!</h2>
+<br>
+<p>Thanks for your application, {{ first }} {{ last }}. You applied for the role of {{ position }} at a salary of {{ "${:,.2f}".format(salary) }} and have experience in {{ skills }}.</p>
+<br>
+<br>
+
+{% endblock %}
