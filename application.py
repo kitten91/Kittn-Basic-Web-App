@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, request, render_template, session
 
 app = Flask(__name__)
 
+
+app.secret_key = "supersecret"
 
 @app.route("/")
 def index_page():
@@ -15,22 +17,22 @@ def show_user_application():
 
 	return render_template("application-form.html")
 
-@app.route("/application-response")
+@app.route("/application")
 def respond_to_users_application():
-	"respond to the user to let them know their application has been received."
 
-	first_name = request.args.get("firstname")
-	last_name = request.args.get("lastname")
-	radio_position = request.args.get("radio-job")
-	chosen_salary = request.args.get("salary-choice")
-	relevant_skills = request.args.get("skills")
+    session["firstname"] = request.args["firstname"]
+    session["lastname"] = request.args["lastname"]
+    session["salary"] = int(request.args["salary"])
+    session["radio-job"] = request.args["radio-job"]
+    session["skills"] = request.args["skills"]
 
-	return render_template("application-response.html",
-							first=first_name,
-							last=last_name,
-							position=radio_position,
-							salary=chosen_salary,
-							skills=relevant_skills)
+    return render_template("application.html",
+							first=session["firstname"],
+							last=session["lastname"],
+							salary=session["salary"],
+							position=session["radio-job"],
+							skills=session["skills"])
+
 
 if __name__ == "__main__":
     app.run(debug=True)

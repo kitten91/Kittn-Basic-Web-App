@@ -5,28 +5,25 @@
 {% block content %}
 <h1>Application</h1>
 <br>
-<h4>Let's get started. Fill out the fields below to give us an idea of who you are and what skills you can contribute to the Kittn team.</h4>
+<div class = "panel panel-primary">
+   <div class = "panel-heading">
+      <h4 class = "panel-title">Let's get started. Fill out the fields below to give us an idea of who you are and what skills you can contribute to the Kittn team.</h4>
+   </div>
+</div>
+<!-- <h4>Let's get started. Fill out the fields below to give us an idea of who you are and what skills you can contribute to the Kittn team.</h4>
+</div> -->
 <br>
-<form method="get" action="/application-response">
+<form action="/application">
 	<p>First Name:</p><input type="text" name="firstname">
 <br>
 	<p>Last Name:</p><input type="text" name="lastname">
 <br>
+	<p>My desired salary amount is:</p><input type="text" name="salary">
 <br>
 	<p>I am interested in the role of (choose one):</p>
-	<input type="radio" name="radio-job" value="Social Media Manager"> Social Media Manager
-	<input type="radio" name="radio-job" value="Front-End Developer"> Front-End Developer
+	<input type="radio" name="radio-job" value="Software Engineer"> Software Engineer
+	<input type="radio" name="radio-job" value="QA Engineer"> QA Engineer
 	<input type="radio" name="radio-job" value="Product Manager"> Product Manager
-	<input type="radio" name="radio-job" value="iOS Software Engineer"> iOS Software Engineer
-<br>
-<br>
-	<p>My desired salary is:</p>
-	<select name="salary-choice">
-  	<option value="$30,000-$50,000">$30,000-$50,000</option>
-  	<option value="$55,000-$75,000">$55,000-$75,000</option>
-  	<option value="$80,000-$100,000">$80,000-$100,000</option>
-  	<option value="over $100,000">$100,000+</option>
-	</select>
 <br>
 <br>
 	<p>Please list three relevant skills you have for this position:</p>

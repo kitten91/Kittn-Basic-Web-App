@@ -1,5 +1,11 @@
 h1 {font-family: Arial
-
 }
 
-p {font-family: Arial}
+p {font-family: Arial
+}
+
+input, textarea {
+
+  background-color : #ffff00; 
+
+}
