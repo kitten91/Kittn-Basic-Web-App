@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Kittn Application{% endblock %}
+{% block title %}Kittn * Application{% endblock %}
 
 {% block content %}
 <h1>Application</h1>
@@ -10,15 +10,17 @@
       <h4 class = "panel-title">Let's get started. Fill out the fields below to give us an idea of who you are and what skills you can contribute to the Kittn team.</h4>
    </div>
 </div>
-<!-- <h4>Let's get started. Fill out the fields below to give us an idea of who you are and what skills you can contribute to the Kittn team.</h4>
-</div> -->
 <br>
 <form action="/application">
 	<p>First Name:</p><input type="text" name="firstname">
 <br>
-	<p>Last Name:</p><input type="text" name="lastname">
 <br>
-	<p>My desired salary amount is:</p><input type="text" name="salary">
+	<p>Last Name:</p><input class="lastbold" type="text" name="lastname">
+<br>
+<br>
+	<p>My desired salary amount is:</p>
+	<input type="text" name="salary" required>
+<br>
 <br>
 	<p>I am interested in the role of (choose one):</p>
 	<input type="radio" name="radio-job" value="Software Engineer"> Software Engineer

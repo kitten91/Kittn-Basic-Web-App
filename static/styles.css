@@ -1,11 +1,14 @@
-h1 {font-family: Arial
-}
-
-p {font-family: Arial
-}
-
 input, textarea {
 
-  background-color : #ffff00; 
+  background-color : #ffff00;
 
+}
+
+.footer {
+	font-size: 0.2em;
+}
+
+.lastbold input[type="text"] {
+
+	font-weight: bold;
 }
